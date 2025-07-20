@@ -1,4 +1,11 @@
-# config.py
-API_KEY = "your_api_key_here"
-DATABASE_URL = "your_database_url_here"
-SECRET_KEY = "your_secret_key_here"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+api_KEY = os.getenv("API_KEY")
+database_URL = os.getenv("DATABASE_URL")
+secret_KEY = os.getenv("SECRET_KEY")
+
+print(api_KEY)
+print(database_URL)
+print(secret_KEY)
